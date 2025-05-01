@@ -36,7 +36,7 @@ for ip in $ips; do
 done
 
 # Get today's date in syslog format (e.g., "May 01")
-today=$(date '+%b %d')
+today=$(date '+%Y-%m-%d')
 
 # Count total blocked attempts on port 22 today
 total_today=$(grep "$today" /var/log/ufw.log | grep 'BLOCK' | grep 'DPT=22' | wc -l)
